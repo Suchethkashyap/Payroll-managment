@@ -74,4 +74,5 @@ Report</strong></font></button>
 </form>
 </center>
 </body>
+<?php include('templates/footer.php'); ?>
 </html>

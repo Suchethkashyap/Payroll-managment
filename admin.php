@@ -10,6 +10,6 @@
         <title>Admin Page</title>
     </head>
     <body>
-        This is admin page view able only by logged in users.
+        This is admin page viewable only by logged in users.
     </body> 
 </html>
