@@ -12,26 +12,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-
-	<!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet" >
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" ></script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<?php include('templates/css-tags.php'); ?>
+<?php include('templates/stylecss.php'); ?>
 </head>
 <body>
-	<h1>Welcome </h1>
-  <h2>My Employee Manager</h2>
-  <h2>Administrator Login</h2>
+  <div class="main_heading">
+	  <h1>Welcome </h1>
+    <h2>My Employee Manager</h2>
+    <h2>Administrator Login</h2>
+  
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
   Login
 </button>
+</div>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

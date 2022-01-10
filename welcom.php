@@ -6,6 +6,8 @@ session_start();
 <html>
 <head>
 <?php include('templates/header.php'); ?>
+<?php include('templates/css-tags.php'); ?>
+<?php include('templates/stylecss.php'); ?>
 <style>
 .button {
  background-color: #000000;

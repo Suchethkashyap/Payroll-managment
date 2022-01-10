@@ -1,36 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <title>emp details</title>
-	<style>
-		.display tr{
-		font-family: arial, sans-serif;
-		border-collapse: collapse;
-		width: 10%;
-		}
-
-		.display th .display td{
-		border: 1px solid #dddddd;
-		text-align: left;
-		padding: 8px;
-		}
-		.display th{
-			background-color: blue;
-		}
-
-
-		.display tr:nth-child(even) {
-		background-color: #dddddd;
-		}
-</style>
+<?php include('templates/displaycss.php'); ?>
  <script src="emp_search.js" async></script>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-	<form action="">
+	<form action="" style="padding:20px 530px 20px;">
 	   <input type="text" id="myInput" placeholder="Search for names.." title="Type in a name">
 	   <input type="submit" onclick="myFunction();" placehoder="Search">
 	</form>
@@ -41,7 +17,7 @@ $result = mysqli_query($conn,"SELECT * FROM emp ");
 ?>
 
 <table id="emp_search" class="display">
-	<tr>
+	<tr  class="tagLine">
 	<th>Employee <br> id</br></th>
 	<th>Employee<br> Title</br></th>
 	<th>Employee<br> Name</br></th>
@@ -54,6 +30,7 @@ $result = mysqli_query($conn,"SELECT * FROM emp ");
 	<th>Mobile<br>No.</br></th>
 	<th>Email_id</th>
 	<th>Pan car no.</th>
+	<th></th>
 	</tr>
 	<tbody id="body">
 
@@ -63,20 +40,20 @@ $result = mysqli_query($conn,"SELECT * FROM emp ");
 	while($row = mysqli_fetch_array($result)) {
 	?>
 	<tr id="tr" class="<?php if(isset($classname)) echo $classname;?>">
-	<td><?php echo $row["emp_id"]; ?></td>
-	<td><?php echo $row["emp_title"]; ?></td>
-	<td id="empname"><?php echo $row["emp_name"]; ?></td>
-	<td><?php echo $row["emp_dob"]; ?></td>
-	<td><?php echo $row["emp_doj"];?></td>
-	<td><?php echo $row["emp_address"];?></td>
-	<td><?php echo $row["emp_city"];?></td>
-	<td><?php echo $row["emp_state"];?></td>
-	<td><?php echo $row["emp_pincode"];?></td>
-	<td><?php echo $row["emp_mobno"];?></td>
-	<td><?php echo $row["emp_mailid"];?></td>
-	<td><?php echo $row["emp_panno"];?></td>
+	<th><?php echo $row["emp_id"]; ?></th>
+	<th><?php echo $row["emp_title"]; ?></th>
+	<th id="empname"><?php echo $row["emp_name"]; ?></th>
+	<th><?php echo $row["emp_dob"]; ?></th>
+	<th><?php echo $row["emp_doj"];?></th>
+	<th><?php echo $row["emp_address"];?></th>
+	<th><?php echo $row["emp_city"];?></th>
+	<th><?php echo $row["emp_state"];?></th>
+	<th><?php echo $row["emp_pincode"];?></th>
+	<th><?php echo $row["emp_mobno"];?></th>
+	<th><?php echo $row["emp_mailid"];?></th>
+	<th><?php echo $row["emp_panno"];?></th>
 
-	<td><a href="delete_emp.php?id=<?php echo $row["emp_id"]; ?>">Delete</a></td>
+	<th><a href="delete_emp.php?id=<?php echo $row["emp_id"]; ?>">Delete</a></th>
 	</tr>
 	</tbody>
 	<?php
@@ -84,5 +61,7 @@ $result = mysqli_query($conn,"SELECT * FROM emp ");
 	}
 	?>
 </table>
+<div><p></p></div>
 </body>
+<?php include('templates/footer.php'); ?>
 </html>
